@@ -48,22 +48,23 @@ hr {
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #00fff79f;
+  opacity: 70%;
   display: none;
   overflow: hidden;
   border-radius: 1rem;
   cursor: pointer;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .card__img > img {
   width: 100%;
   border-radius: 1rem;
-
+  transition: all 0.3s;
 }
 
 .card__img:hover .card__img-eye {
   display: flex;
+  background-color: #00fff7;
 }
 
 ul {
@@ -83,6 +84,11 @@ ul {
 .card__details-title {
   color: #ffffff;
   font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.card__details-title:hover {
+  color: #00fff7;
+  cursor: pointer;
 }
 
 .card__details-description {
@@ -132,4 +138,22 @@ ul {
   width: 10%;
   border: 1px solid #fff;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 55%;
+    font-family: "Outfit", sans-serif;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  .card__details-title,
+  .card__developer--description,
+  .card__details-description--price,
+  .card__details-description--time {
+    font-size: 1.4rem;
+  }
 }
